@@ -53,3 +53,12 @@ public int rollDice(int sides){
         return randomInt;
         }
 ```
+> Arrays
+
+`double [] fracNumbers = {3.2,1.2,2.2};
+int [][] grades`
+
+> Compile
+
+**javac helloworld.java
+java helloworld**
