@@ -13,7 +13,9 @@ tags:
 ## Java Difference with C++
 
 > Parameter and Arguments
-Parameter is in the definition of functions, Arguments is in the calls of functions.
+
+**Parameter is in the definition of functions, Arguments is in the calls of functions.**
 
 > Funciton Definition
-public void funcitonname(){..};
+
+**public void funcitonname(){..};**
