@@ -1,7 +1,7 @@
 # Site settings
 title: BY Blog
 SEOTitle: PZheng | BY Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/fengmian.jpg
 email: pzheng16@outlook.com
 description: "Every failure is leading towards success."
 keyword: "Self-learning, Java, C++, Leetcode, Python"
@@ -12,7 +12,7 @@ github_repo: "https://github.com/pzheng16/pzheng16.github.io" # you code reposit
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Go Jackets!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/touxiang.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
