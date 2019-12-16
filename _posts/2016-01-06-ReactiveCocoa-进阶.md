@@ -29,6 +29,7 @@ returns a range between 0 to 10;
 `(int) randomNUmber`
 Cast it to an int;
 
+
 ```
 // Using the sides parameter, change this code so that it returns
 // the correct range of roll values no matter the number of sides provided.
