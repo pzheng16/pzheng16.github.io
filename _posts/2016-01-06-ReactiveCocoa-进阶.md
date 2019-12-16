@@ -22,5 +22,11 @@ tags:
 
 > Random Numbers
 
-'''math.random();'''
+`math.random();`
 returns a random decimal value between 0 and 1, includes 0 but not 1;
+`math.random()*10`
+returns a range between 0 to 10;
+`(int) randomNUmber`
+Cast it to an int;
+
+
