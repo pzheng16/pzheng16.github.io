@@ -19,3 +19,8 @@ tags:
 > Funciton Definition
 
 **public void funcitonname(){..};**
+
+> Random Numbers
+
+'''math.random();'''
+returns a random decimal value between 0 and 1, includes 0 but not 1;
