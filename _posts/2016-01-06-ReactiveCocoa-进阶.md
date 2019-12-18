@@ -62,3 +62,9 @@ int [][] grades`
 
 **javac helloworld.java
 java helloworld**
+
+> CamelCase and camelCase
+
+**Class use CamelCase like Book, Pokemon**
+
+**Object use camelCase like lordOfTheRings**
