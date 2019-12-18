@@ -117,6 +117,76 @@ void function(N, matrix,m,n)
 }
 ```
 
+# Word Matching DP -- 单词 从后往前
+
+```
+class Solution {
+public:
+    bool isMatch(string s, string p) {
+        int n1 = s.size();
+        int n2 = p.size();
+        vector<vector<int>> dp(n1+1,vector<int>(n2+1,0));
+        dp[0][0] = 1;
+	// Initialization
+        for (int i = 1; i <= n1; ++i)
+        {
+            dp[i][0] = 0;
+        }
+        for (int j = 1; j <= n2; ++j)
+        {
+            if (p[j-1] == '*')
+            {
+                dp[0][j] = dp[0][j-2];
+            }
+            else
+            {
+                dp[0][j] = 0;
+            }
+        }
+	// 分情况讨论
+        for (int i = 1; i <= n1; ++i)
+        {
+            for (int j = 1; j <= n2; ++j)
+            {
+                if (p[j-1] != '.' && p[j-1] != '*')
+                {
+                    if (s[i-1] != p[j-1])
+                    {
+                        dp[i][j] = 0;
+                    }
+                    else
+                    {
+                        dp[i][j] = dp[i-1][j-1];
+                    }
+                }
+                else if (p[j-1] == '.')
+                {
+                    dp[i][j] = dp[i-1][j-1];
+                }
+                else if (j >= 2)
+                {
+                    if (p[j-2] == s[i-1])
+                    {
+                        dp[i][j] = (dp[i-1][j-2] || dp[i][j-2] || dp[i-1][j]);
+                    }
+                    else if (p[j-2] != '.')
+                    {
+                        dp[i][j] = dp[i][j-2];
+                    }
+                    else
+                    {
+                        dp[i][j] = (dp[i-1][j-2] || dp[i][j-2] || dp[i-1][j]);
+                    }
+                }
+            }
+        }
+        return dp[n1][n2] > 0 ? true:false;
+    }
+};
+```
+
+
+
 # 前缀树模板
 
 ```
