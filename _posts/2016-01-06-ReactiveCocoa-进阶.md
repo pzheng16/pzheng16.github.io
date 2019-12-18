@@ -1,4 +1,4 @@
-﻿---
+----
 layout:     post                   
 title:      Learning Java              
 subtitle:   Gatech
@@ -139,5 +139,6 @@ class Position {
    }
 }
 ```
+
 
 
