@@ -200,24 +200,26 @@ public:
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
-       if (root == NULL)
-        {
-            return {};
-        }
-        postorderTraversal(root -> left);
-        postorderTraversal(root -> right);
-        ans.push_back(root-> val);
-        return ans; 
-    }
+       order(root);
+       return ans;
+    } 
 private:
+    void order(TreeNode* root)
+    {
+    	if (root == NULL)
+        {
+            return;
+        }
+        order(root -> left);
+        order(root -> right);
+        ans.push_back(root-> val);
+        return; 
+    }
     vector<int> ans;
 };
 ```
 
-
-
-
-
+Save Memory of run-time stack;
 
 
 # 前缀树模板
