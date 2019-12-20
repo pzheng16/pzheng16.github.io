@@ -34,9 +34,6 @@ Http: hypertext transfter protocol
  - Encoding
  - Client Data
  
- 
- ![enter image description here](https://drive.google.com/uc?export=view&id={1TTrGJ8SHG3dvkQfwUEkqwerS-m2UXIE4})
- 
 
 ### String vs StringBuilder:
 
