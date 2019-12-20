@@ -33,6 +33,11 @@ Http: hypertext transfter protocol
  - Remote Address
  - Encoding
  - Client Data
+ 
+ 
+ ![enter image description here](https://drive.google.com/file/d/1TTrGJ8SHG3dvkQfwUEkqwerS-m2UXIE4/view?usp=sharing)
+ 
+ 
 
 ### String vs StringBuilder:
 
