@@ -9,7 +9,6 @@ catalog: true
 tags:                               
     - Python
     - Web
-    - Machine Learning
 ---
 
 # [面向对象进阶](https://github.com/pzheng16/Python-100-Days/blob/master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6.md)
@@ -127,6 +126,8 @@ json模块主要有四个比较重要的函数，分别是：
 - `dumps` - 将Python对象处理成JSON格式的字符串
 - `load` - 将文件中的JSON数据反序列化成对象
 - `loads` - 将字符串的内容反序列化成Python对
+
+这里出现了两个概念，一个叫序列化，一个叫反序列化。自由的百科全书维基百科上对这两个概念是这样解释的：“序列化（serialization）在计算机科学的数据处理中，是指将数据结构或对象状态转换为可以存储或传输的形式，这样在需要的时候能够恢复到原先的状态，而且通过序列化的数据重新获取字节时，可以利用这些字节来产生原始对象的副本（拷贝）。与这个过程相反的动作，即从一系列字节中提取数据结构的操作，就是反序列化（deserialization）”
 
 ```Python
 import requests
