@@ -128,7 +128,7 @@ json模块主要有四个比较重要的函数，分别是：
 - `load` - 将文件中的JSON数据反序列化成对象
 - `loads` - 将字符串的内容反序列化成Python对
 
-
+```Python
 import requests
 import json
 
@@ -142,6 +142,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
+```
 
 
