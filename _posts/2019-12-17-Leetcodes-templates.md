@@ -26,7 +26,7 @@ def binary_search(l, r, cond)
 ```
 
 # Recursion 模板
-```
+```python
 def function(int a){
     if cal[a] is True:## memoriztion
         return cal[a]
@@ -39,7 +39,7 @@ def function(int a){
 # 排列模板
   
   
-```
+```python
 def P(n, m, cur, used):
   if len(cur) == m:
     print(cur)
@@ -56,7 +56,7 @@ m = 3
 P(n, m, [], [False] * n)
 ```
 # 组合模板
-```
+```python
 def C(n, m, s, cur):
   if len(cur) == m:
     print(cur)
@@ -70,7 +70,7 @@ m = 3
 C(n, m, 0, [])
 ```
 # DFS
-```
+```python
 // Check whether there is a path from |start| to |target| in graph G.
 // neighbor(x) returns the neighbors of x in G.
 seen = set([start])
@@ -86,7 +86,7 @@ def dfs(n):
 return dfs(start)
 ```
 # BFS
-```
+```python
 // Find the shortest path from |start| to |target| in a unweighted graph G.
 // neighbor(x) returns the neighbors of x in G.
 q = deque([start])
@@ -107,7 +107,7 @@ return -1 # not found
 
 # 滚动数组DP模板
 
-```
+```C++
 void function(N, matrix,m,n)
 {
 	intilize;
@@ -130,7 +130,7 @@ void function(N, matrix,m,n)
 
 # Word Matching DP -- 单词 从后往前
 
-```
+```C++
 class Solution {
 public:
     bool isMatch(string s, string p) {
@@ -198,7 +198,7 @@ public:
 
 # Binary Tree Traversal 模板
 
-```
+```C++
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -235,7 +235,7 @@ Save Memory of run-time stack;
 
 # 前缀树模板
 
-```
+```C++
 class Trie(object):
   def __init__(self): self.root = {}
   def insert(self, word):
@@ -261,7 +261,7 @@ class Trie(object):
     
 # Union Find
  
-```
+```C++
 class UnionFindSet:
   def __init__(self, n):
     self.p = [i for i in range(n + 1)]
