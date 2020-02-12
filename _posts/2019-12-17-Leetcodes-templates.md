@@ -11,7 +11,7 @@ tags:
     - Leetcode
 ---
 # 二分模板
-```
+```python
 // Returns the smallest m in [l, r),
 // s.t. cond(m) == True
 // If not found returns r.
