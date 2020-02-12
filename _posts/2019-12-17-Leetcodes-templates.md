@@ -24,6 +24,17 @@ def binary_search(l, r, cond)
       l = m + 1
   return l  
 ```
+
+# Recursion 模板
+```
+def function(int a){
+    if cal[a] is True:## memoriztion
+        return cal[a]
+    #do something with function(a-1)
+    cal[a] = function(a-1)+a
+    return cal[a]
+}
+```
   
 # 排列模板
   
