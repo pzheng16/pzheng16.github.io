@@ -262,37 +262,6 @@ class Trie(object):
 # Union Find
  
 ```C++
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
 // Author: Huahua
 class UnionFindSet {
 public:
@@ -336,6 +305,6 @@ private:
     vector<int> ranks_;
 };
  ```
-### Examples: [花花酱 LeetCode 547. Friend Circles](https://zxi.mytechroad.com/blog/graph/leetcode-547-friend-circles/)
+Examples: [花花酱 LeetCode 547. Friend Circles](https://zxi.mytechroad.com/blog/graph/leetcode-547-friend-circles/)
 [花花酱 LeetCode 737. Sentence Similarity II](https://zxi.mytechroad.com/blog/hashtable/leetcode-737-sentence-similarity-ii/)
 [花花酱 LeetCode 684. Redundant Connection](https://zxi.mytechroad.com/blog/tree/leetcode-684-redundant-connection/)
