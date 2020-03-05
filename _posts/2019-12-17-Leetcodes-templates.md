@@ -262,24 +262,80 @@ class Trie(object):
 # Union Find
  
 ```C++
-class UnionFindSet:
-  def __init__(self, n):
-    self.p = [i for i in range(n + 1)]
-    self.r = [1 for i in range(n + 1)]
-  def find(self, u):
-    while u != self.p[u]:
-      self.p[u] = self.p[self.p[u]]
-      u = self.p[u]
-    return u
-  def union(self, u, v):
-    pu, pv = self.find(u), self.find(v)
-    if pu == pv: return False    
-    if self.r[pu] < self.r[pv]:
-      self.p[pu] = pv
-    elif self.r[pu] > self.r[pv]:
-      self.p[pv] = pu
-    else:        
-      self.p[pv] = pu
-      self.r[pu] += 1
-    return True
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+// Author: Huahua
+class UnionFindSet {
+public:
+    UnionFindSet(int n) {
+        ranks_ = vector<int>(n + 1, 0);        
+        parents_ = vector<int>(n + 1, 0);                
+        
+        for (int i = 0; i < parents_.size(); ++i)
+            parents_[i] = i;
+    }
+    
+    // Merge sets that contains u and v.
+    // Return true if merged, false if u and v are already in one set.
+    bool Union(int u, int v) {
+        int pu = Find(u);
+        int pv = Find(v);
+        if (pu == pv) return false;
+        
+        // Meger low rank tree into high rank tree
+        if (ranks_[pv] < ranks_[pu])
+            parents_[pv] = pu;           
+        else if (ranks_[pu] < ranks_[pv])
+            parents_[pu] = pv;
+        else {
+            parents_[pv] = pu;
+            ranks_[pu] += 1;
+        }
+        
+        return true;
+    }
+    
+    // Get the root of u.
+    int Find(int u) {        
+        // Compress the path during traversal
+        if (u != parents_[u])
+            parents_[u] = Find(parents_[u]);        
+        return parents_[u];
+    }
+private:
+    vector<int> parents_;
+    vector<int> ranks_;
+};
  ```
+### Examples: [花花酱 LeetCode 547. Friend Circles](https://zxi.mytechroad.com/blog/graph/leetcode-547-friend-circles/)
+[花花酱 LeetCode 737. Sentence Similarity II](https://zxi.mytechroad.com/blog/hashtable/leetcode-737-sentence-similarity-ii/)
+[花花酱 LeetCode 684. Redundant Connection](https://zxi.mytechroad.com/blog/tree/leetcode-684-redundant-connection/)
