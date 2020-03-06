@@ -395,6 +395,9 @@ class Trie(object):
  --- 
 # Union Find
  
+<iframe width="420" height="345" src="https://www.youtube.com/embed/VJnUwsE4fWA?feature=oembed">
+</iframe>
+
 ```c++
 // Author: Huahua
 class UnionFindSet {
