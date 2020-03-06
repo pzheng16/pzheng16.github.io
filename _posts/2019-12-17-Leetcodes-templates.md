@@ -10,6 +10,61 @@ tags:
     - C++
     - Leetcode
 ---
+# Linked List Construction
+```c++
+  //Definition for singly-linked list.
+  struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode(int x) : val(x), next(NULL) {}
+  };
+  ```
+#### Tips:
+Linked List Problems Mostly relate to **Recursion**, especially Trees (BST)
+
+#### Canonical Problems: 
+[LeetCode 206. Reverse Linked List:](https://zxi.mytechroad.com/blog/list/leetcode-206-reverse-linked-list/)
+
+**Iteration**
+```c++
+class Solution {
+public:
+  ListNode* reverseList(ListNode* head) {
+    ListNode* prev = nullptr;
+    ListNode* curr = head;
+    ListNode* next;
+    while (curr) {
+      next = curr->next;
+      curr->next = prev;
+      prev = curr;
+      curr = next;
+    }
+    return prev;
+  }
+};
+```
+**Recursion**
+```c++
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+       if (!head || !(head->next)) return head;
+       ListNode* tmp = head -> next;
+       ListNode* newNode = reverseList(tmp);
+       tmp->next = head;
+       head->next = NULL;
+       return newNode;
+    }
+};
+```
 # 二分模板
 ```python
 // Returns the smallest m in [l, r),
