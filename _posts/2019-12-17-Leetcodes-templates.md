@@ -70,6 +70,14 @@ C(n, m, 0, [])
 ```
  --- 
 # DFS
+
+#### Notes:
+DFS function:
+1. when void: do not need to deal with returning some value, just focusing on when to finish.
+2. when some value (like boolean), needs to consider what to return when some condition happens.
+
+
+
 ```python
 // Check whether there is a path from |start| to |target| in graph G.
 // neighbor(x) returns the neighbors of x in G.
