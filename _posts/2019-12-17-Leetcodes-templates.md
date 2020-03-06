@@ -117,7 +117,41 @@ public:
     }
 };
 ```
-
+### DFS Examples: 200. Number of Islands
+```c++
+class Solution {
+public:
+    int numIslands(vector<vector<char>>& grid) {
+        if (grid.empty()) return 0;
+        int m = grid.size();
+        int n = grid[0].size();
+        int num = 0;
+        for (int i = 0; i < m; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                if (grid[i][j] == '1')
+                {
+                    DFS(m,n,i,j,grid);
+                    num += 1;
+                }
+            }
+        }
+        return num;
+        
+    }
+private:    
+    void DFS(int m, int n,int r, int c,vector<vector<char>>& grid)
+    {
+        if (r < 0 || c < 0 || r >= m || c >= n || grid[r][c] == '0') return;
+        grid[r][c] = '0';
+        DFS(m,n,r+1,c,grid);
+        DFS(m,n,r-1,c,grid);
+        DFS(m,n,r,c+1,grid);
+        DFS(m,n,r,c-1,grid);        
+    }
+};
+```
 
  --- 
 # BFS
