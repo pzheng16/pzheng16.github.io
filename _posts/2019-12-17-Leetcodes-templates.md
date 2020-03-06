@@ -384,12 +384,12 @@ private:
     vector<int> ranks_;
 };
  ```
-###Explanation
+### Explanation
 ![UFS1](https://zxi.mytechroad.com/blog/wp-content/uploads/2017/11/sp1-1.png)
 ![UFS2](https://zxi.mytechroad.com/blog/wp-content/uploads/2017/11/sp1-2.png)
 ![UFS3](https://zxi.mytechroad.com/blog/wp-content/uploads/2017/11/sp1-3.png)
 
-###Examples: 
+### Examples: 
 -[花花酱 LeetCode 547. Friend Circles](https://zxi.mytechroad.com/blog/graph/leetcode-547-friend-circles/)
 -[花花酱 LeetCode 737. Sentence Similarity II](https://zxi.mytechroad.com/blog/hashtable/leetcode-737-sentence-similarity-ii/)
 -[花花酱 LeetCode 684. Redundant Connection](https://zxi.mytechroad.com/blog/tree/leetcode-684-redundant-connection/)
