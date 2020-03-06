@@ -24,7 +24,7 @@ def binary_search(l, r, cond)
       l = m + 1
   return l  
 ```
-
+ --- 
 # Recursion 模板
 ```python
 def function(int a){
@@ -35,10 +35,8 @@ def function(int a){
     return cal[a]
 }
 ```
-  
+   --- 
 # 排列模板
-  
-  
 ```python
 def P(n, m, cur, used):
   if len(cur) == m:
@@ -55,6 +53,7 @@ n = 5
 m = 3
 P(n, m, [], [False] * n)
 ```
+ --- 
 # 组合模板
 ```python
 def C(n, m, s, cur):
@@ -69,6 +68,7 @@ n = 5
 m = 3
 C(n, m, 0, [])
 ```
+ --- 
 # DFS
 ```python
 // Check whether there is a path from |start| to |target| in graph G.
@@ -85,6 +85,7 @@ def dfs(n):
   return False
 return dfs(start)
 ```
+ --- 
 # BFS
 ```python
 // Find the shortest path from |start| to |target| in a unweighted graph G.
@@ -104,7 +105,7 @@ while q:
   steps += 1
 return -1 # not found
 ```
-
+ --- 
 # 滚动数组DP模板
 
 ```C++
@@ -127,7 +128,7 @@ void function(N, matrix,m,n)
 	return ...;
 }
 ```
-
+ --- 
 # Word Matching DP -- 单词 从后往前
 
 ```C++
@@ -195,7 +196,7 @@ public:
     }
 };
 ```
-
+ --- 
 # Binary Tree Traversal 模板
 
 ```C++
@@ -232,7 +233,7 @@ private:
 
 Save Memory of run-time stack;
 
-
+ --- 
 # 前缀树模板
 
 ```C++
@@ -258,7 +259,7 @@ class Trie(object):
     return p
     
  ```
-    
+ --- 
 # Union Find
  
 ```C++
