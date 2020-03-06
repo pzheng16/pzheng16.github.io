@@ -131,7 +131,7 @@ void function(N, matrix,m,n)
  --- 
 # Word Matching DP -- 单词 从后往前
 
-```C++
+```c++
 class Solution {
 public:
     bool isMatch(string s, string p) {
@@ -199,7 +199,7 @@ public:
  --- 
 # Binary Tree Traversal 模板
 
-```C++
+```c++
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -236,7 +236,7 @@ Save Memory of run-time stack;
  --- 
 # 前缀树模板
 
-```C++
+```c++
 class Trie(object):
   def __init__(self): self.root = {}
   def insert(self, word):
@@ -262,7 +262,7 @@ class Trie(object):
  --- 
 # Union Find
  
-```C++
+```c++
 // Author: Huahua
 class UnionFindSet {
 public:
