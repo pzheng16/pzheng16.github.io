@@ -78,3 +78,39 @@ ms 表示是从一个节点一直走到leaf的值，这个过程中就间接更�
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/trees/13.png)
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/trees/14.png)
+
+---
+---
+
+## Binary Search Tree
+
+**添加虚头节点**
+recursion
+**in-order traversal BST** 就是一个排序好的vector
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/trees/15.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/trees/16.png)
+
+```c++
+if(!root) return;
+inorder(root->left);
+do something to root:   prev = root; // 对每个节点的操作都是在这里进行；
+inorder(root->right);
+return;
+```
+```c++
+BST找最小值就是一直 root -> left until it is NULL
+最大值就是一直 root ->right untile it is NULL
+```
+
+### Delete Items in BST
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/trees/17.png)
+
+##### 链表常用技巧 ！！
+做有关链表的题目，有个常用技巧：**添加一个虚拟头结点：**
+```c++
+ListNode *head = new ListNode(-1);
+```
+可以简化边界情况的判断
