@@ -76,7 +76,9 @@ DFS function:
 1. when void: do not need to deal with returning some value, just focusing on when to finish.
 2. when some value (like boolean), needs to consider what to return when some condition happens.
 
-
+DFS:
+for all neighbors:
+    if (unvisited) DFS();
 
 ```python
 // Check whether there is a path from |start| to |target| in graph G.
