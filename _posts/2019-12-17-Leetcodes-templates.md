@@ -108,7 +108,7 @@ return -1 # not found
  --- 
 # 滚动数组DP模板
 
-```C++
+```c++
 void function(N, matrix,m,n)
 {
 	intilize;
