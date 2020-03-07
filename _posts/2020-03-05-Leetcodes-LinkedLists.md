@@ -15,6 +15,20 @@ tags:
 
 **linked list排序 想到 while 以及 priority_queue**
 
+- 利用 双指针，一个走一步，一个走两步，去获得linked list 的中间指针 （比如用来isPalindrome）
+
+```c++
+  ListNode* slow = head;
+  ListNode* fast = head;
+  while(fast && fast -> next)
+  {
+      fast = fast -> next -> next;
+      slow = slow -> next;
+  }
+  if (fast) slow = slow -> next;
+  slow = Reverse(slow);
+```
+
 ### Leetcode 23 Merge K Sorted lists
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/linkedlist/1.png)
