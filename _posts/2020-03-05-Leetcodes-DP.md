@@ -33,6 +33,102 @@ DP[i][j] iterate i or j can be reverted
 
 ---
 
+## Leetcode Canonical Problems
+
+
+### 121. Best Time to Buy and Sell Stock
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/leetcodeImg/41.png)
+
+```c++
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int n = prices.size();
+        if (n < 2) return 0;
+        vector<int> gains(n - 1, 0);
+        for (int i = 1; i < n; ++i)
+            gains[i - 1] = prices[i] - prices[i - 1];
+        return max(0, maxSubArray(gains));
+    }
+private:
+    // From LC 53. Maximum Subarray
+    int maxSubArray(vector<int>& nums) {
+        vector<int> f(nums.size());
+        f[0] = nums[0];
+        
+        for (int i = 1; i < nums.size(); ++i)
+            f[i] = max(f[i - 1] + nums[i], nums[i]);
+        
+        return *std::max_element(f.begin(), f.end());
+    }
+};
+```
+### 70. Climbing Stairs
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/leetcodeImg/42.png)
+
+```c++
+class Solution {
+public:
+  int climbStairs(int n) {
+    // f[i] = climbStairs(i)
+
+    int n1, n2, n3;
+    n1 = 0;
+    n2 = 1;
+    // f[i] = f[i-1] + f[i-2]
+    for (int i = 1;i <= n; ++i)
+    {
+        n3 = n1 + n2;
+        n1 = n2;
+        n2 = n3;
+    }
+    return n2;
+  }
+};
+```
+### 53. Maximum Subarray
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/leetcodeImg/43.png)
+
+```c++
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        vector<int> f(nums.size());
+        f[0] = nums[0];
+        
+        for (int i = 1; i < nums.size(); ++i)
+            f[i] = max(f[i - 1] + nums[i], nums[i]);
+        
+        return *std::max_element(f.begin(), f.end());
+    }
+};
+```
+### 198. House Robber
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/leetcodeImg/44.png)
+
+```c++
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        if (nums.empty()) return 0;
+        int dp1 = 0;   
+        int dp2 = 0;
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            int dp = max(dp1, dp2 + nums[i]);
+            dp2 = dp1;
+            dp1 = dp;
+        }
+        return dp1;
+    }
+};
+```
+
+----
 ## Leetcode 787 Cheapest Flights Within K stops
 Bellman-Ford Algorithm
 ```c++
