@@ -45,4 +45,4 @@ typedef pair<int,char> pi;
 
 当需要找到**最小值或者最大值**的时候，就不需要一个一个遍历了，用**heap**去实现 （**multiset， multimap**) 等等。
 
-![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/genearl/monkey.png)
+![img](http://wx2.sinaimg.cn/large/006m97Kgly1ftmb1yc189j30v90usq66.jpg)
