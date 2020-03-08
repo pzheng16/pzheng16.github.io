@@ -45,7 +45,7 @@ bool check(int A, int B, int C)
         }
         return false;
     }
-    else　// A 和 Ｂ　同号
+    else// A 和 Ｂ　同号
     {
         if ((A > 0 && C >= 0) || (A < 0 && C <= 0>>))// A 和 C 同号
         {
