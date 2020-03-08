@@ -21,8 +21,9 @@ tags:
 ##### Tips:
 
 ```c++
-isalpha(var);//return true when var is alphabet (character) 
-isdigit();
+// check if the character contains decimals or chars
+isalpha(char);//return true when var is alphabet (character) 
+isdigit(char);
 
 // uppercase to lowercase
 char(tolower('A')) = 'a'
