@@ -11,7 +11,7 @@ github_repo: "https://github.com/pzheng16/pzheng16.github.io" # you code reposit
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Go Jackets!"
+sidebar-about-description: "Go Jackets! Go PZ!"
 sidebar-avatar: /img/touxiang.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -20,6 +20,7 @@ sidebar-avatar: /img/touxiang.jpg      # use absolute URL, seeing it's used in b
 RSS: false
 # weibo_username:     qiubaiying
 github_username:    pzheng16
+zhihu_username:     盆里壶
 #twitter_username:   qiubaiying
 
 
@@ -52,9 +53,9 @@ kramdown:
 
 
 
-# # 评论系统
-# # Disqus（https://disqus.com/）
-# # disqus_username: qiubaiying
+评论系统
+Disqus（https://disqus.com/）
+disqus_username: perkzzheng
 
 # # Gitalk
 # gitalk:
