@@ -46,3 +46,14 @@ typedef pair<int,char> pi;
 当需要找到**最小值或者最大值**的时候，就不需要一个一个遍历了，用**heap**去实现 （**multiset， multimap**) 等等。
 
 <img src="http://wx2.sinaimg.cn/large/006m97Kgly1ftmb1yc189j30v90usq66.jpg" width="200" height="200" />
+
+##### C++ map 自动生成，比如 char, int 自动为 0 的value,可以直接 count[t[i]]++
+
+
+```c++
+unordered_map<char, int> counts;
+for (int i = 0; i < n; i++) {
+	counts[s[i]]++;
+	counts[t[i]]--;
+}
+```
