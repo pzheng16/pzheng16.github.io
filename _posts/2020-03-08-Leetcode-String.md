@@ -162,3 +162,39 @@ public:
     }
 };
 ```
+
+
+
+#### Leetcode 38. Count and Say
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/4.png)
+
+##### Two Pointers: 
+one points to the beginning. the other points to the current one.
+
+```c++
+// Author: Huahua, 4 ms, 8.6 MB
+class Solution {
+public:
+  string countAndSay(int n) {
+    string ans = "1";
+    for (int i = 1; i < n; ++i)
+      ans = say(ans);
+    return ans;
+  }
+private:
+  string say(const string& n){
+    string ans;
+    int s = 0, l = n.length();
+    // two pointers, s points to the beginning, e points to the current one.
+    for (int e = 1; e <= l; ++e)
+      if (e == l || n[s] != n[e]) {
+        int count = e - s;
+        ans += '0' + count;
+        ans += n[s];
+        s = e;
+      }
+    return ans;
+  }
+};
+```
