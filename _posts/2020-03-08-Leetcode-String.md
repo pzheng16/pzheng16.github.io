@@ -18,6 +18,12 @@ tags:
 - 从**中心**散开
 - **unordered_map**， 当两个string比较的时候
 
+##### Tips:
+
+```c++
+isalpha(var);//return true when var is alphabet (character) 
+isdigit();
+```
 
 #### Leetcode 242. Valid Anagram
 
