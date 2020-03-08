@@ -25,6 +25,7 @@ isalpha(var);//return true when var is alphabet (character)
 isdigit();
 
 // uppercase to lowercase
+char(tolower('A')) = 'a'
 int main()
 {
     char str[] = "John is from USA.";
