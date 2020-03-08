@@ -11,6 +11,11 @@ tags:
     - Leetcode
 ---
 
+**不要在一行写判断函数**
+如下面：会出错！！！！
+```c++
+if(needle[k] != haystack[j-nSize+1+k]) allSame = false; break;
+```
 
 **Sort** 通常能做到 NlogN 如果time exceed，可以尝试先sort，再做处理
 
