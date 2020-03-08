@@ -115,3 +115,50 @@ public:
     }
 };
 ```
+
+
+#### Leetcode 28. Implement strStr()
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/3.png)
+
+##### Hash(char) --> Rabi-Karp Algorithm
+
+```c++
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int nSize = needle.size();
+        int hSize = haystack.size();
+        if (nSize > hSize) return -1;// if needle size is larger, then return -1
+        int ini = 0;
+        int nSum = 0;
+        for (int i = 0; i < nSize; ++i)
+        {
+            ini += haystack[i] - '0'; // calculate the initial sum of hash(char) (needle size)
+            nSum += needle[i] - '0';// calculate the initial sum of needle hash(char) 
+        }
+        for (int j = nSize-1; j < hSize; ++j)
+        {
+            if (j >= nSize)// update initial sum by substracting the first one, and adding a new one at the end
+            {
+                ini = ini - (haystack[j-nSize]-'0') + (haystack[j]-'0');
+            }
+            if (ini == nSum)// compara characters one by one only when hash sums are the same
+            {
+                bool allSame = true;
+                for(int k = 0; k <= nSize-1; ++k)
+                {
+                    if(needle[k] != haystack[j-nSize+1+k])
+                    {
+                        allSame=false;
+                        break;
+                    }
+                }
+                if (allSame) return j-nSize+1;
+            }
+        }
+        return -1;
+        
+    }
+};
+```
