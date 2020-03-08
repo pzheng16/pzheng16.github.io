@@ -26,6 +26,10 @@ isalpha(char);//return true when var is alphabet (character)
 isdigit(char);
 isalnum(char);// check the character is the number or alphabet
 
+string ans = "a";
+ans += '0' + 26;
+// string can use = 
+
 // uppercase to lowercase
 char(tolower('A')) = 'a'
 int main()
