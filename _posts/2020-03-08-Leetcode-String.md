@@ -63,3 +63,54 @@ public:
     }
 };
 ```
+
+#### Leetcode 125. Valid Palindrome
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/2.png)
+
+##### Two Pointers
+
+```c++
+// First trial, two iterations
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        string newS;
+        for (auto c: s)
+        {
+            if(isalpha(c))
+            {
+                newS.push_back(char(tolower(c)));
+            }
+            else if (isdigit(c))
+            {
+                newS.push_back(c);
+            }
+        }
+        cout << newS;
+        for (int i = 0, j = newS.size()-1; j-i >= 1; ++i, --j)
+        {
+            if (newS[i] != newS[j]) return false;
+        }
+        return true;
+    }
+};
+```
+
+In one iteration, and without new String.
+
+```c++
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        for (int i = 0, j = s.size()-1; j-i >= 1; ++i, --j)
+        {
+            while(!isalnum(s[i]) && i < j) ++i;
+            while(!isalnum(s[j]) && i < j) --j;
+            if (j - i < 1) return true;
+            if (tolower(s[i]) != tolower(s[j])) return false;
+        }
+        return true;
+    }
+};
+```
