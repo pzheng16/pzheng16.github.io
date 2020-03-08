@@ -24,6 +24,7 @@ tags:
 // check if the character contains decimals or chars
 isalpha(char);//return true when var is alphabet (character) 
 isdigit(char);
+isalnum(char);// check the character is the number or alphabet
 
 // uppercase to lowercase
 char(tolower('A')) = 'a'
