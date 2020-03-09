@@ -30,6 +30,10 @@ string ans = "a";
 ans += '0' + 26;
 // string can use = 
 
+// Substr
+s.substr(i, 10)
+// start from position i, with 10 characters
+
 // uppercase to lowercase
 char(tolower('A')) = 'a'
 int main()
