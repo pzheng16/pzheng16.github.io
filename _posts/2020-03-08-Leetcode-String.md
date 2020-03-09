@@ -34,6 +34,13 @@ ans += '0' + 26;
 s.substr(i, 10)
 // start from position i, with 10 characters
 
+// string to int
+string s = stoi("123")//123
+
+//char to int
+char c = '0' + 20;
+int num = '20' - '0';
+
 // uppercase to lowercase
 char(tolower('A')) = 'a'
 int main()
