@@ -22,6 +22,7 @@ tags:
 
 ### Save time Example: laziness
 
+By laziness, spark has time to do the optimization.
 Spark leverages this by analyzing the chain of operations before executing.
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/spark/2.png)
