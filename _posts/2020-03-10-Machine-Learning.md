@@ -7,8 +7,8 @@ author:     PZ
 header-img: img/post-bg-github-cup.jpg
 catalog: true
 tags:
-    - C++
-    - Leetcode
+    - Machine Learning
+    - Python
 ---
 
 ## 准确率 accuracy
