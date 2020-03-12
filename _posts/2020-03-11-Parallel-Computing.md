@@ -11,6 +11,52 @@ tags:
     - Parallel
 ---
 
+## Parallel Computing - Machine Learning
+
+Parallel 减少的是Wall-time, CPU，GPU运行的时间时不变的，对并行来说
+
+### Gradient Descent: 
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/7.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/15.png)
+
+### Communication
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/8.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/9.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/10.png)
+
+### MapReduce
+
+Synchronization after each map, or reduce
+
+**client-server, message-passing communication, and synchronous**
+
+MapReduce 是 同步的！！！
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/11.png)
+
+### 加速比
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/12.png)
+
+**需要考虑 synchronization and communication** 
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/13.png)
+
+通信复杂度：server 和 worker之间传输数据量。正比于参数，work nodes越多，复杂度也就越高
+
+延迟：1bit和一个矩阵延迟几乎都是一样的
+是。是由computer network 决定的
+通信次数越多，latency造成的代价也就越大
+
+
+同步 synchronization: worker 有快有慢。。
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/14.png)
+
 ## CPU cache 对程序的影响 （Matrix)
 
 ```c++
