@@ -57,6 +57,19 @@ MapReduce 是 同步的！！！
 同步 synchronization: worker 有快有慢。。
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/14.png)
 
+## 异步 gradient descent
+
+每个worker比较稳定。
+
+## Decentralized Network
+
+peer-to-peer, message-passing-communication
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/16.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/17.png)
+
+
 ## CPU cache 对程序的影响 （Matrix)
 
 ```c++
