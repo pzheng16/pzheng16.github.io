@@ -264,6 +264,7 @@ Get O(1)
 
 记住 Map是红黑树, Search in O(logN)
 unordered_map 是 hash-table, search in O(1)
+set也是类似的
 
 list<pair<int,int>> _lru;
 
