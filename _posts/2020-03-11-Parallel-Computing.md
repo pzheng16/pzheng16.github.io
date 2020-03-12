@@ -15,7 +15,7 @@ tags:
 
 ```c++
 /*square1.cpp*/
-/*未经优化的矩阵乘法程序*/
+/*未经优化的矩阵乘法程序-不高效*/
 #include 
 using namespace std;
 #define N 1000
