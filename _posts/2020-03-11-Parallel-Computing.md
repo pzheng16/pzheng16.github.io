@@ -53,6 +53,8 @@ MapReduce 是 同步的！！！
 是。是由computer network 决定的
 通信次数越多，latency造成的代价也就越大
 
+**更通用的公式** latency + communication complexity/bandwidth + communication complexity*C(每个字节需要计算的时间)
+
 
 同步 synchronization: worker 有快有慢。。
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/14.png)
@@ -69,6 +71,60 @@ peer-to-peer, message-passing-communication
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/17.png)
 
+
+## Allreduce 算法
+
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/18.png)
+
+### Reduce + BroadCast (MPI)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/19.png)
+
+**2\*(α + S/B) + N\*S\*C**
+
+在parameter server节点上的计算耗时是N\*S\*C
+
+该算法最大的缺点就是parameter server节点的带宽会成为瓶颈
+
+### Tree: recursive halving and doubling
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/20.png)
+
+相比reduce+broadcast，最大的改进是规避了单节点的带宽瓶颈。
+
+在halving和doubling的每一步，通信耗时都是α + S/B，计算耗时都是S*C。
+
+步数约等于log2N，因此整体耗时是**2\*log2N\*(α + S/B + S*C )**。
+
+### ButterFly
+
+Recursive算法中一个明显的不足是，在halving阶段有一半的节点没有进行send发送操作，只是“傻傻”等待接收数据。比如图4中的第一步，a->b，c->d发送数据的时候，b和d节点的发送带宽没有被利用起来。
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/21.png)
+
+整体耗时大概是log2N*(α + S/B + S*C )
+
+核心概念：让所有node 的 send 和 recv 带宽都利用起来，这样达到最快的速度。
+
+### Ring AllReduce
+
+Butterfly已经在每步中把每个节点的send/recv带宽都利用起来了，那是不是完美无缺了？答案是否定的。其潜在的问题是如果数据块过大（S过大），每次都完整send/recv一个S的数据块，并不容易**把带宽跑满，且容易出现延时抖动。**。
+
+Ring算法默认把每个节点的数据切分成N份。当然，这要求数据块中的元素个数count =S/sizeof(element)大于N，否则要退化为使用其他算法。
+
+![img](https://pic2.zhimg.com/80/v2-8d92848cad4ccb12717c8ceb03e8adb9_1440w.jpg)
+
+第一阶段通过(N-1)步，让每个节点都得到1/N的完整数据块。每一步的通信耗时是α+S/(NB)，计算耗时是(S/N)*C。 这一阶段也可视为scatter-reduce。
+
+第二阶段通过(N-1)步，让所有节点的每个1/N数据块都变得完整。每一步的通信耗时也是α+S/(NB)，没有计算。这一阶段也可视为allgather。
+
+整体耗时大概是2*(N-1)*[α+S/(NB)] + (N-1)*[(S/N)*C]
+
+
+### ALlReduce Algorithms
+
+![img](https://pic4.zhimg.com/80/v2-65aa14466ca96726998129e8cd40a1db_1440w.jpg)
 
 ## CPU cache 对程序的影响 （Matrix)
 
