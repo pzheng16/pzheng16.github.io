@@ -122,7 +122,7 @@ Ring算法默认把每个节点的数据切分成N份。当然，这要求数据
 整体耗时大概是2*(N-1)*[α+S/(NB)] + (N-1)*[(S/N)*C]
 
 
-### ALlReduce Algorithms
+### ALlReduce Algorithms Choosing
 
 ![img](https://pic4.zhimg.com/80/v2-65aa14466ca96726998129e8cd40a1db_1440w.jpg)
 
