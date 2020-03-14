@@ -370,6 +370,11 @@ L2 比 L1 慢，因为 L1物理上离CPU核心更近。而且L2容量更大。
 
 DRAM 所占硅面积大，但是速度快。
 
+### L3 is shared
+
+Today, the L3 is characterized as a pool of fast memory common to all the CPUs on an SoC. It’s often gated independently from the rest of the CPU core and **can be dynamically partitioned to balance access speed**, power consumption, and storage capacity.
+
+
 ## LRU cache O(1) implementation
 
 ![img](https://zxi.mytechroad.com/blog/wp-content/uploads/2017/09/146-ep50.png)
@@ -444,4 +449,3 @@ private:
 
  线程是系统指令执行的最小单位，每个线程都有自己的专有寄存器 PC，SP等，但是代码区是共享的。
 
- 
