@@ -101,9 +101,6 @@ Note: J will always decrease as K is increased. The one exception is if k-mea
 ### Stochastic Gradient Descent
 
 This algorithm will only try **to fit one training example** at a time. 
-Mini-Batch Gradient Descent
-
-
 ### Mini-Batch Gradient Descent
 
 Instead of using all m examples as in batch gradient descent, and instead of using only 1 example as in stochastic gradient descent, we will use some in-between number of examples b.
@@ -161,3 +158,5 @@ k is the hyper-parameter for tuning: cross-validation
 one vs all, 得到 θ1,...,θn; then choose the largest value of max(i) θi*x + b
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/21.png)
+
+![img](https://img-blog.csdnimg.cn/20190212173009929.png)
