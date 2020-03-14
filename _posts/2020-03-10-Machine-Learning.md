@@ -38,6 +38,8 @@ tags:
 - 曲线下面积的尺度不变。它测量预测的排名情况，而不是测量其绝对值。
 - 曲线下面积的分类阈值不变。它测量模型预测的质量，而不考虑所选的分类阈值
 
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/16.png)
+
 ## L1, L2 正则化
 
 L1 正则化可以让一些不必要的权重变为0，减少RAM消耗，和计算量，如果用L2话不能使得权重变为0，那么计算量依然是很大的。
@@ -111,4 +113,51 @@ Instead of using all m examples as in batch gradient descent, and instead of usi
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/9.png)
 
 
+### Regression and Hyper-parameter
 
+Naive Cross-Validation
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/11.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/12.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/10.png)
+
+
+#### Hyper-Parameter Tuning
+
+Cross-Validation to determine the best Parameter, for example: using different degree k in polynomial regression. Then, find the best θ for each k, and use cross-validation to find the best θ with the lowest loss function. Then, we can know the corresponded k.
+
+#### k-fold cross-validation
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/13.png)
+
+### Derivative of Vector 
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/14.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/15.png)
+
+### KNN 
+
+k is the hyper-parameter for tuning: cross-validation
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/17.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/18.png)
+
+#### Efficient KNN: 
+
+先选取landmarks，相当于cluster；然后找最近的landmark, 然后再在最近的landmark cluster里面找最近的点。
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/19.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/20.png)
+
+## SVM
+
+需要指出 C, choice of kernel function
+
+one vs all, 得到 θ1,...,θn; then choose the largest value of max(i) θi*x + b
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/21.png)
