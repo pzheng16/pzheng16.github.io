@@ -160,3 +160,36 @@ one vs all, 得到 θ1,...,θn; then choose the largest value of max(i) θi*x + 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/21.png)
 
 ![img](https://img-blog.csdnimg.cn/20190212173009929.png)
+
+## Decision Tree and Random Forest:
+
+### Decision Tree
+
+决策树学习采用的是自顶向下的递归方法, 其基本思想是以信息熵为度量构造一棵熵值 下降最快的树,到叶子节点处的熵值为零, 此时每个叶节点中的实例都属于同一类。
+
+#### bootstrap
+
+Bootstraping的名称来自成语“pull up by your own bootstraps”,意思是依靠你自己的资源,称为自助法,它是一种有放回的抽样方法.
+"拔靴法": 从手上有限的资料, 产生不同的副本, 来模拟不一样的资料.
+从已知大小为  N  的数据集  D  中, 进行  t=1,2,...,T  的过程:
+进行有放回的采样, 得到  N′  大小的数据集  Dt  ,
+从  A{D}  中建立分类器  gt  (ID3、C4.5、CART、SVM、Logistic回归等)
+重复上述步骤, 得到  m  个分类器,  G=Uniform(gt) 
+作用: 通过投票/平均, 降低变化variance 与决策树恰好相反, 决策树的作用, 是使variance变大, 对数据敏感.
+
+![img](https://clyyuanzi.gitbooks.io/julymlnotes/content/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-11%20%E4%B8%8A%E5%8D%8810.52.57.png)
+
+#### 决策树的优缺点
+优点: 决策树对训练属于有很好的分类能力,
+缺点: 但对未知的测试数据未必有好的分类能力,泛化 能力弱,即可能发生过拟合现象。剪枝,随机森林
+
+
+### 随机森林
+
+随机森林能够解决, 决策树的过拟合问题. 随机森林用训练集生成多个(非常深的)决策树.在预测时, 每个树的都会预测一个结果, 每个结果加权表决, 来避免过拟合. 例如, 如果你训练了3个树, 其中有2个树的结果是A, 1个数的结果是B, 那么最终结果会是A。
+
+Random Forest classifiers work around that limitation by creating a whole bunch of decision trees (hence "forest") — each trained on random subsets of training samples (drawn with replacement) and features (drawn without replacement) — and have the decision trees work together to make a more accurate classification.
+
+1. 不同的子数据集，有放回的抽取
+2. 不同的特征子集，可能有重复，可以选取部分
+
