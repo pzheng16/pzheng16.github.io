@@ -259,7 +259,7 @@ In the first case, we don't have enough examples to need a complicated polynomia
 
 ### Principle Component Analysis PCA
 
-Find a vector!!
+Find a vector!! Reduce 3D to 2D
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/23.png)
 
@@ -268,4 +268,16 @@ Projection Error: 到这个线的距离，或者这个平面的距离
 左边是Linear Regression, 右边是 PCA
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/24.png)
+
+
+**Mean Normalization and Feature Scaling**
+
+
+
+#### SVD: singular value decomposition
+
+Reduce data from n-dimensions to k-dimensions
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/24.png)
+
 
