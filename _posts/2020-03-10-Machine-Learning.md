@@ -272,12 +272,20 @@ Projection Error: 到这个线的距离，或者这个平面的距离
 
 **Mean Normalization and Feature Scaling**
 
-
-
 #### SVD: singular value decomposition
 
 Reduce data from n-dimensions to k-dimensions
 
-![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/24.png)
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/25.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/26.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/27.png)
 
 
+z = U(T)x;
+**U is n*n, 选取k个向量，竖着的，这样就能将n维降低到k维**
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/28.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/29.png)
