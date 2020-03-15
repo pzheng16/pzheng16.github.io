@@ -190,6 +190,11 @@ Bootstraping的名称来自成语“pull up by your own bootstraps”,意思是�
 
 Random Forest classifiers work around that limitation by creating a whole bunch of decision trees (hence "forest") — each trained on random subsets of training samples (drawn with replacement) and features (drawn without replacement) — and have the decision trees work together to make a more accurate classification.
 
+信息熵，information entropy：-p*log(p); 如果可取数目较多的属性有所偏好，导致分支过于细化。
+增益率:信息增益/IV(可取数值越大，值越大)
+基尼系数：Gini(D) = 1- (+)p^2
+随机抽取两个样本，其类别标记不一致的概率。
+
 1. 不同的子数据集，有放回的抽取
 2. 不同的特征子集，可能有重复，可以选取部分
 
@@ -208,3 +213,59 @@ bootstrap aggregating :自助法，有放回的抽样
 #### Boosting
 
 算法思想：首先从训练集初始权重训练出一个弱学习器1，根据弱学习器的学习误差率表现来更新训练样本的权重，使得之前弱学习器学习误差率高的训练样本点的权重变高，使得这些误差率高的店在后面的弱学习器2中得到更多的重视。然后基于调整权重后的训练集来训练弱学习器2，如此重复进行，知道弱学习器数达到预定的数目T，最终将这T个弱学习器通过集合策略进行整合，最终得到强学习器
+
+
+## Details
+
+### Matrix multiplication
+
+Associative. (A∗B)∗C=A∗(B∗C)
+
+### Inverse
+
+The inverse of a matrix A is denoted A−1. Multiplying by the inverse results in the identity matrix.
+
+A non square matrix does not have an inverse matrix. We can compute inverses of matrices in octave with the pinv(A) function [1] and in matlab with the inv(A) function. Matrices that don't have an inverse are singular or degenerate.
+
+|A| = 0 奇异矩阵，没有逆矩阵
+
+### Gradient Descent
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/22.png)
+
+θ:=θ−α∇J(θ)
+
+### Diagnostics
+
+A typical rule of thumb when running diagnostics is:
+
+- More training examples fixes high variance but not high bias.
+- Fewer features fixes high variance but not high bias.
+- Additional features fixes high bias but not high variance.
+- The addition of polynomial and interaction features fixes high bias but not high variance.
+- When using gradient descent, decreasing lambda can fix high bias and increasing lambda can fix high variance (lambda is the regularization parameter).
+- When using neural networks, small neural networks are more prone to under-fitting and big neural networks are prone to over-fitting. Cross-validation of network size is a way to choose alternatives.
+
+### SVM vs Logistic
+
+Logistic Regression vs. SVMs
+If n is large (relative to m), then use logistic regression, or SVM without a kernel (the "linear kernel")
+
+If n is small and m is intermediate, then use SVM with a Gaussian Kernel
+
+If n is small and m is large, then manually create/add more features, then use logistic regression or SVM without a kernel.
+
+In the first case, we don't have enough examples to need a complicated polynomial hypothesis. In the second example, we have enough examples that we may need a complex non-linear hypothesis. In the last case, we want to increase our features so that logistic regression becomes applicable.
+
+### Principle Component Analysis PCA
+
+Find a vector!!
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/23.png)
+
+Projection Error: 到这个线的距离，或者这个平面的距离
+
+左边是Linear Regression, 右边是 PCA
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/24.png)
+
