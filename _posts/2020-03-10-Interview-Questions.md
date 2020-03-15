@@ -160,7 +160,10 @@ int hammingWeight(uint32_t n)
 1. different
 2. XOR, 按位与，按位或
 3. allreduce: tree, butterfly
-4. 
+4. 位图法
+5. 缓存之间的交换
+6. 精度损失
+7. 分块，分row and column
 
 #### 面试题目
 
