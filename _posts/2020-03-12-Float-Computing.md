@@ -108,3 +108,5 @@ tags:
   float和double的精度是由尾数的位数来决定的。浮点数在内存中是按科学计数法来存储的，其整数部分始终是一个隐含着的“1”，由于它是不变的，故不能对精度造成影响。
   float：2^23 = 8388608，一共七位，这意味着最多能有7位有效数字，但绝对能保证的为6位，也即float的精度为6~7位有效数字；
   double：2^52 = 4503599627370496，一共16位，同理，double的精度为15~16位。
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/float/3.png)
