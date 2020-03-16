@@ -239,7 +239,10 @@ if (n&(n-1) == 0) return true;
 
 14)CUDA同步函数，__sycnthreads()(好像没拼错)的作用。如何实现块间同步。因为之前有试过，我就说用global里面建锁就可以，加上原子操作。还把以前遇到的问题也和他讨论了。
 
-可以用不同的kernel function(); 或者 global function 
+
+**Atomic Functions:**
+An atomic function performs a read-modify-write atomic operation on one 32-bit or 64-bit word residing in **global or shared memory**. For example, atomicAdd() reads a word at some address in global or shared memory, adds a number to it, and writes the result back to the same address. The operation is atomic in the sense that **it is guaranteed to be performed without interference from other threads**. 
+
 
 15)C的链表为什么在GPU里不合适
 
@@ -256,16 +259,16 @@ Memory references are coalesced into sequence of memory transactions
 
 19)然后问硬件上一个小问题，我没有啥经验，问题好像是CPU cache有 4 megabytes, 3 mega, 8 mega, using which cache is more efficiently?我说8 mega，因为transfer和process ratio更优(根据自我感觉)
 
-20) MAP 和 MLE 的 区别
+1)  MAP 和 MLE 的 区别
     MLE:最大似然概率，对P(x|θ) 进行 计算，使得P最大的θ；
     MAP: 最大后验估计，对 P(θ|X) 进行计算，使得P最大的θ；
     
-21) 样本比较少的时候，怎么让分类效果更好
+2)  样本比较少的时候，怎么让分类效果更好
 
     数据层面：数据增广，对一个数据做休整，产生更多的样本； 合成数据
     模型方面：正则化；k交叉验证；选择合适的模型；
     
-22) 一个大int数组，所有数都在0-999之间，快速排序方法
+3)  一个大int数组，所有数都在0-999之间，快速排序方法
 
 位图法：按位或放置1在特定的位置，按位与判断某个数是不是已经出现过。
     
