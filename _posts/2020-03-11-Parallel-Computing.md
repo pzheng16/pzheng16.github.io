@@ -291,7 +291,6 @@ Virtual memory used to keep programs executing on the same machine from interfer
 
 ![img](https://images2017.cnblogs.com/blog/918357/201711/918357-20171108184518059-1211588113.png)
 
-
 ![img](https://images2017.cnblogs.com/blog/918357/201711/918357-20171108184841731-1270993019.png)
 
 虚拟内存可以用来：
