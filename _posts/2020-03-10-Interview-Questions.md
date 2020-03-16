@@ -287,8 +287,12 @@ override:重写：指的是派生类的函数屏蔽了与其同名的基类函�
 
 31）为什么推荐一维数组？
 
-因为二维数组对应的每一行是不同的缓冲区，不是连续的，对应到GPU里面也是的。这样就不利于线程对DRAM burst 模式，也就是不能同时访问连续的内存区域。coalescing.
-    
+因为二维数组对应的每一行是不同的缓冲区，不是连续的，对应到GPU里面也是的。这样就不利于线程对DRAM burst 模式，也就是不能同时访问连续的内存区域。coalescing. 
 32) 为什么kernel functions 一定返回的是void？
 
 因为如果不强制void，就会涉及到CPU里面一样的函数的return调用，这样就需要runtime stack去储存返回值的地址等等数据，这样对gpu是不高效的。应该直接对地址进行操作，所以就可以直接传入指针，对特定的地址进行操作，而不需要返回任何的值，也就是void。
+
+**Function call mechanism will impact performance**
+**A little time needed for function call/return**
+Memory also required for stack; implications on recursion
+In a multi-threaded program, each thread has its own runtime stack, introducing some complexity'
