@@ -255,7 +255,7 @@ Memory references are coalesced into sequence of memory transactions
 
 17)非负整型排序好的数组A，B来记录每个不同的数第一次在A中出现的位置。写代码CUDA实现。
 
-用一个数组记录，初始化为max_float；
+用原子操作: atomicMin(); no interference with other threads.
 
 18)一个非负整型数组。一个数出现奇数次，其它出现偶数次。比如11232。如何找出出现奇数次的数。分析复杂度。我给的是用桶计数，建桶的方法就是哈希。时间复杂度n，空间有点大看哈希的策略。他提示的方法是异或。a^a=0; 0^a=a; a^b=b^a。全部遍历一遍就好。然后是GPU对应优化和分析。纠正了我一些理解错误，很nice。
 
