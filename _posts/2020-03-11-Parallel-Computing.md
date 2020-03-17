@@ -453,6 +453,9 @@ private:
 在计算中，上下文切换是存储进程或线程状态的进程，以便可以还原它并在以后恢复执行。 这允许多个进程共享一个CPU，这是多任务操作系统的基本功能。 短语“上下文切换”的确切含义有所不同。 在多任务上下文中，它是指为一个任务存储系统状态的过程，以便可以暂停该任务并恢复另一个任务。
 
 ## CPU pipeline
+
+**Execution time** = N * CPI * cycle time
+
 Five steps to process each instructions:
 
 **instruction fetch --> decode _--> fetch operands --> execute --> store result**
@@ -460,3 +463,4 @@ Five steps to process each instructions:
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/22.png)
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/parallel/23.png)
+
