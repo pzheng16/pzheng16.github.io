@@ -289,3 +289,9 @@ z = U(T)x;
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/28.png)
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/ml/29.png)
+
+## 协方差矩阵 covariance matrix
+
+各个维度的相关性，样品特征均值化后，各特征方差一样。计算得到的协方差矩阵，其中元素的值越大，则说明对应下标的特征之间相关性更高。
+
+用来PCA 的 SVD分解
