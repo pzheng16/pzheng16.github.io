@@ -164,6 +164,8 @@ int hammingWeight(uint32_t n)
 5. 缓存之间的交换
 6. 精度损失
 7. 分块，分row and column
+8. 分block计算
+9. 矩阵幂快速运算，把一些计算转化成矩阵运算
 
 #### 面试题目
 
@@ -298,4 +300,4 @@ override:重写：指的是派生类的函数屏蔽了与其同名的基类函�
 **Function call mechanism will impact performance**
 **A little time needed for function call/return**
 Memory also required for stack; implications on recursion
-In a multi-threaded program, each thread has its own runtime stack, introducing some complexity'
+In a multi-threaded program, each thread has its own runtime stack, introducing some complexity
