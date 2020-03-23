@@ -41,6 +41,9 @@ string s = stoi("123")//123
 char c = '0' + 20;
 int num = '20' - '0';
 
+// int to string
+std::to_string(2);
+
 // uppercase to lowercase
 char(tolower('A')) = 'a'
 int main()
