@@ -152,6 +152,8 @@ int hammingWeight(uint32_t n)
 
 例：将X=10100000的低4位置1 ，用 X | 0000 1111 = 1010 1111即可得到。
 
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/interview/3.png)
+
 
 ### 经典面试题
 
