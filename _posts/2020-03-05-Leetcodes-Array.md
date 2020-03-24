@@ -17,3 +17,9 @@ tags:
 - **array 从两边夹向中间 product of array except self**
 - **array 从中间向两边散开 Longest - Palindromic Substring**
 - **array也可以倒着考虑**，从后往前 --》 merge sorted aray
+
+## Sliding windows: 固定一个增加(++),另一个不定增加
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/6.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/5.png)
