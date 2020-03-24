@@ -58,6 +58,10 @@ int main()
     return 0;
 }
 ```
+char 可以直接用 int 表示，vector<int>里面存相应的char;
+合法的字符只有128种
+所以可以用vector<int> hashmap(128,-1) 表示所有的字符串。
+
 
 #### Leetcode 242. Valid Anagram
 
