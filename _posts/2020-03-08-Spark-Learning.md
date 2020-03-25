@@ -47,3 +47,11 @@ Use persist() or cache() to cache an RDD in memory after it takes actions (like 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/spark/5.png)
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/spark/6.png)
+
+## How spark jobs are executed
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/spark/7.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/spark/9.png)
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/spark/8.png)
