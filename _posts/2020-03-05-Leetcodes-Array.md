@@ -23,3 +23,10 @@ tags:
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/6.png)
 
 ![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/string/5.png)
+
+## Spreading from the center
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/array/1.png)
+
+Try all possible i and find the longest palindromic string whose center is i (odd case) and i / i + 1 (even case).
+
