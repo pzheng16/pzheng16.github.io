@@ -68,6 +68,22 @@ bool check(int A, int B, int C)
 
 ```
 
+## Heap Data Structure
+
+It must be **full binary tree!!!** That is why it can preserve O(logN) complexity.
+
+![img](https://raw.githubusercontent.com/pzheng16/pzheng16.github.io/master/img/interview/4.png)
+
+2i+1, and 2i+2 for left child and right child; (i << 1) + 1 or (i << 1) + 2
+parent = (j - 1) >> 2
+
+**Heap** provides a very efficient data structure for **implementing priority queue !!**
+
+**最大堆，最小堆！！**
+
+## Binary Search Tree
+
+Not guaranteed with a height of logN because BST is not always a balanced tree.
 
 ## Nvidia 
 
